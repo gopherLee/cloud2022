@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--suppress ALL -->
 <mapper namespace="com.atguigu.springcloud.dao.PaymentDao">
     <insert id="create" parameterType="Payment"
-            useGeneratedKeys="true" keyProperty="id">
-            insert into payment(serial) values(#{serial})
+            useGeneratedKeys="false" keyProperty="id">
+            insert into payment (serial) values(#{serial})
     </insert>
     <resultMap id="BaseResultMap" type="com.atguigu.springcloud.entities.Payment">
         <id column="id" property="id" jdbcType="BIGINT"/>
